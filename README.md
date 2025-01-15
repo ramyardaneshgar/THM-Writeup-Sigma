@@ -5,7 +5,7 @@ By Ramyar Daneshgar
 
 
 ### **What is Sigma?**  
-Sigma abstracts the complexities of log-based detections by providing a unified YAML-based structure. This modular design enables analysts to craft detection rules that can be translated into backend-specific SIEM queries, such as Splunk SPL or Elastic Query DSL.
+Sigma abstracts the complexities of log-based detections by providing a unified YAML-based structure. This modular design enables analysts to develop detection rules that can be translated into backend-specific SIEM queries, such as Splunk SPL or Elastic Query DSL.
 
 #### **Key Features**:  
 - **Vendor Independence**: Sigma removes reliance on proprietary query languages, ensuring cross-platform compatibility.  
@@ -20,7 +20,7 @@ Sigma abstracts the complexities of log-based detections by providing a unified 
 ---
 
 ### **Sigma Rule Syntax**  
-Understanding Sigma's structure was essential for crafting effective detections. Each element in the rule corresponds to a key component of the detection pipeline:  
+Understanding Sigma's structure was essential for create effective detections. Each element in the rule corresponds to a key component of the detection pipeline:  
 
 - **Logsource**: Defines the data source (`product`, `category`, `service`) for log queries.  
 - **Detection**: Describes the logic, including search identifiers (e.g., `CommandLine`, `Image`) and their modifiers (`contains`, `startswith`).  
@@ -55,7 +55,7 @@ The first challenge was detecting the silent installation of AnyDesk—a legitim
    - Noted command-line flags (`--install`, `--start-with-win`) used for stealthy installation.  
    - Identified `C:\ProgramData\AnyDesk.exe` as the execution directory.  
 
-2. **Crafted Sigma Rule**:  
+2. **Creating Sigma Rule**:  
    - Specified **process_creation** as the log source.  
    - Used `contains` and `all` modifiers for matching multiple conditions.  
 
@@ -94,7 +94,7 @@ tags:
 ---
 
 #### **Scenario 2: Practical Threats**  
-The second task required crafting Sigma rules for two distinct threats: malicious scheduled task creation and ransomware activity.
+The second task required creating Sigma rules for two distinct threats: malicious scheduled task creation and ransomware activity.
 
 **Task 1: Scheduled Task Creation Detection**  
 - **Focus**: Detect execution of `schtasks.exe` to create a task (`spawn`) scheduled for `20:10`.  
