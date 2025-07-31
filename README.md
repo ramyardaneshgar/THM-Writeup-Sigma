@@ -23,7 +23,7 @@ Sigma abstracts the complexities of log-based detections by providing a unified 
 Understanding Sigma's structure was essential for create effective detections. Each element in the rule corresponds to a key component of the detection pipeline:  
 
 - **Logsource**: Defines the data source (`product`, `category`, `service`) for log queries.  
-- **Detection**: Describes the logic, including search identifiers (e.g., `CommandLine`, `Image`) and their modifiers (`contains`, `startswith`).  
+- **Detection**: Describes the logic, including search identifiers (`CommandLine`, `Image`) and their modifiers (`contains`, `startswith`).  
 - **False Positives**: Documents scenarios where benign activity might match the rule to reduce alert fatigue.  
 - **Tags**: Maps rules to **MITRE ATT&CK** tactics and techniques, enhancing contextual relevance.  
 
@@ -157,7 +157,7 @@ The ransomware rule detected the creation of `YOUR_FILES.txt`, containing a note
    Leveraging value modifiers (`contains`, `endswith`, `all`) refines detections and minimizes false positives.  
 
 3. **Environment-Specific Validation**:  
-   Validating Sigma rules in the operational SIEM ensures compatibility and effectiveness, accounting for differences in field mappings (e.g., `CommandLine.keyword` vs. `process.command_line`).  
+   Validating Sigma rules in the operational SIEM ensures compatibility and effectiveness, accounting for differences in field mappings (`CommandLine.keyword` vs. `process.command_line`).  
 
 4. **MITRE ATT&CK Integration**:  
    Linking rules to tactics and techniques improves threat visibility and enhances reporting for incident response teams.  
