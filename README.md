@@ -1,5 +1,5 @@
-# THM-Writeup-Sigma
-Writeup for TryHackMe Sigma Lab - Sigma-based rule development for platform-agnostic threat detection and SIEM query translation.
+# Sigma
+Sigma-based rule development for platform-agnostic threat detection and SIEM query translation.
 
 By Ramyar Daneshgar
 
